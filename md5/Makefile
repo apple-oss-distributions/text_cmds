@@ -7,29 +7,30 @@
 # and Makefile.postamble (both optional), and Makefile will include them.
 #
 
-NAME = text_cmds
+NAME = md5
 
 PROJECTVERSION = 2.8
-PROJECT_TYPE = Aggregate
+PROJECT_TYPE = Tool
 
-TOOLS = banner cat cksum col colrm column comm cut ed expand fmt\
-        fold head join lam look md5 paste pr rev rs sed sort split\
-        tail tr ul unexpand uniq unvis vis wc
+HFILES = libmd.h
 
-OTHERSRCS = PROJECT Makefile.preamble Makefile Makefile.postamble
+CFILES = md5.c libmd.c
+
+OTHERSRCS = Makefile Makefile.preamble Makefile.postamble md5.1
+
 
 MAKEFILEDIR = $(MAKEFILEPATH)/pb_makefiles
 CODE_GEN_STYLE = DYNAMIC
-MAKEFILE = aggregate.make
-LIBS = -lcurses
+MAKEFILE = tool.make
+NEXTSTEP_INSTALLDIR = /sbin
+LIBS = -lcrypto
 DEBUG_LIBS = $(LIBS)
 PROF_LIBS = $(LIBS)
 
 
-NEXTSTEP_PB_CFLAGS = -Wall -Werror -no-cpp-precomp
 
 
-NEXTSTEP_BUILD_OUTPUT_DIR = /tmp/$(NAME)/Build
+NEXTSTEP_BUILD_OUTPUT_DIR = /tmp/doc_cmds/Build
 
 NEXTSTEP_OBJCPLUS_COMPILER = /usr/bin/cc
 WINDOWS_OBJCPLUS_COMPILER = $(DEVDIR)/gcc
