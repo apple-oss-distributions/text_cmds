@@ -2,14 +2,13 @@
     DYNAMIC_CODE_GEN = YES; 
     FILESTABLE = {
         FRAMEWORKS = (); 
-        H_FILES = (extern.h); 
-        OTHER_LINKED = (str.c, tr.c); 
-        OTHER_SOURCES = (Makefile, Makefile.preamble, Makefile.postamble, tr.1); 
+        OTHER_LINKED = (nl.c); 
+        OTHER_SOURCES = (Makefile, Makefile.preamble, Makefile.postamble, nl.1); 
     }; 
     LANGUAGE = English; 
     LOCALIZABLE_FILES = {}; 
     MAKEFILEDIR = "$(MAKEFILEPATH)/pb_makefiles"; 
-    NEXTSTEP_BUILDDIR = /tmp/text_cmds/Build; 
+    NEXTSTEP_BUILDDIR = /tmp/doc_cmds/Build; 
     NEXTSTEP_BUILDTOOL = /bin/gnumake; 
     NEXTSTEP_INSTALLDIR = /usr/bin; 
     NEXTSTEP_JAVA_COMPILER = /usr/bin/javac; 
@@ -17,7 +16,7 @@
     PDO_UNIX_BUILDTOOL = $NEXT_ROOT/Developer/bin/make; 
     PDO_UNIX_JAVA_COMPILER = "$(JDKBINDIR)/javac"; 
     PDO_UNIX_OBJCPLUS_COMPILER = "$(NEXTDEV_BIN)/gcc"; 
-    PROJECTNAME = tr; 
+    PROJECTNAME = nl; 
     PROJECTTYPE = Tool; 
     PROJECTVERSION = 2.8; 
     WINDOWS_BUILDTOOL = $NEXT_ROOT/Developer/Executables/make; 

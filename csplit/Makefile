@@ -7,16 +7,18 @@
 # and Makefile.postamble (both optional), and Makefile will include them.
 #
 
-NAME = join
+NAME = csplit
 
 PROJECTVERSION = 2.8
 PROJECT_TYPE = Tool
 
-CFILES = join.c
+HFILES = 
 
-OTHERSRCS = Makefile Makefile.preamble Makefile.postamble join.1
+CFILES = csplit.c 
 
-NEXTSTEP_PB_CFLAGS += -D__FBSDID=__RCSID -I/System/Library/Frameworks/System.framework/PrivateHeaders
+OTHERSRCS = Makefile Makefile.preamble Makefile.postamble csplit.1
+
+NEXTSTEP_PB_CFLAGS += -D__FBSDID=__RCSID
 
 MAKEFILEDIR = $(MAKEFILEPATH)/pb_makefiles
 CODE_GEN_STYLE = DYNAMIC
@@ -25,6 +27,9 @@ NEXTSTEP_INSTALLDIR = /usr/bin
 LIBS = 
 DEBUG_LIBS = $(LIBS)
 PROF_LIBS = $(LIBS)
+
+
+
 
 NEXTSTEP_BUILD_OUTPUT_DIR = /tmp/text_cmds/Build
 
